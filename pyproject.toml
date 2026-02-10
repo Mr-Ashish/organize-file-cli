@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file-organizer"
+version = "0.1.0"
+description = "CLI tool to organize files by type"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Zed-Base Developer"}
+]
+keywords = ["file-organization", "cli", "organizer"]
+
+[project.scripts]
+organize-files = "file_organizer.cli:main"
+of = "file_organizer.cli:main"  # Short alias
+org = "file_organizer.cli:main"  # Another short
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["file_organizer*"]
+
+[tool.setuptools.package-dir]
+"" = "src"

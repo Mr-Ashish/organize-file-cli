@@ -1,0 +1,29 @@
+{
+  "size": {
+    "thresholds": {
+      "small": 1048576,
+      "medium": 104857600
+    },
+    "default_unit": "MB",
+    "show_bytes": false
+  },
+  "date": {
+    "format": "%Y-%m"
+  },
+  "extensions": {
+    "images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg", ".webp"],
+    "documents": [".pdf", ".doc", ".docx", ".txt", ".md", ".xls", ".xlsx", ".ppt", ".pptx"],
+    "videos": [".mp4", ".mov", ".avi", ".mkv", ".wmv", ".flv"],
+    "audio": [".mp3", ".wav", ".ogg", ".flac", ".aac"],
+    "archives": [".zip", ".rar", ".7z", ".tar", ".gz"],
+    "code": [".py", ".js", ".html", ".css", ".java", ".cpp", ".c", ".go", ".rs"]
+  },
+  "ui": {
+    "bar_width": 30,
+    "colors_enabled": true,
+    "chart_style": "ascii"
+  },
+  "interactive": {
+    "default_mode": "type"
+  }
+}

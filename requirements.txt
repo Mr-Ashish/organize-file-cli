@@ -1,0 +1,3 @@
+# No external pip deps required (stdlib only: curses for interactive menu, json, etc.)
+# curses is built-in (may need terminfo on some systems; fallback numbered menu)
+# Optional: For richer UI, add 'rich' or 'questionary' later.
