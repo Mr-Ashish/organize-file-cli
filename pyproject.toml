@@ -8,6 +8,9 @@ version = "0.1.0"
 description = "CLI tool to organize files by type"
 readme = "README.md"
 requires-python = ">=3.8"
+dependencies = [
+    "textual>=0.47.0",
+]
 license = {text = "MIT"}
 authors = [
     {name = "Zed-Base Developer"}

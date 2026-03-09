@@ -9,6 +9,17 @@ from .organizer import FileOrganizer
 from .config import RUNTIME_CONFIG
 
 
+def run_tui(directory: str = None):
+    """Launch the Textual TUI interface."""
+    try:
+        from .ui import run_ui
+        run_ui(directory)
+    except ImportError as e:
+        print(f"Error: Textual TUI not available. {e}", file=sys.stderr)
+        print("Install textual with: pip install textual>=0.47.0", file=sys.stderr)
+        sys.exit(1)
+
+
 # ANSI colors for progress/summary (terminal-friendly)
 class Colors:
     GREEN = "\033[92m"
@@ -55,8 +66,18 @@ def main():
         action="version",
         version="file-organizer 0.1.0",
     )
+    parser.add_argument(
+        "--ui",
+        action="store_true",
+        help="Launch the Textual TUI interface for interactive organization",
+    )
 
     args = parser.parse_args()
+
+    # Handle TUI mode
+    if args.ui:
+        run_tui(args.directory)
+        return
 
     try:
         dir_path = Path(args.directory).resolve()
